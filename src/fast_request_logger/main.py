@@ -16,7 +16,7 @@ async def root_get(request: Request):
     return await log_request(request, "GET")
 
 
-@app.put("/", status_code=201)
+@app.put("/", status_code=200)
 async def root_put(request: Request):
     return await log_request(request, "PUT")
 
@@ -30,22 +30,27 @@ async def root_post(request: Request):
 async def root_delete(request: Request):
     return await log_request(request, "DELETE")
 
+@app.delete("/{id}", status_code=204)
+async def root_delete_with_id(request: Request):
+    return await log_request(request, "DELETE")
 
-@app.patch("/", status_code=201)
+@app.patch("/", status_code=200)
 async def root_patch(request: Request):
     return await log_request(request, "PATCH")
 
 
 async def log_request(request: Request, method: str):
-    body = await request.json()
     headers = dict(request.headers)
 
     log_item = {
         "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "method": method,
-        "body": body,
         "headers": headers,
     }
+
+    if method in ["POST", "PUT", "PATCH"]:
+        body = await request.json()
+        log_item["body"] = body
 
     print(log_item)
 
