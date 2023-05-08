@@ -38,6 +38,7 @@ path = "src/fast_request_logger/__about__.py"
 dependencies = [
   "coverage[toml]>=6.5",
   "pytest",
+  "httpx"
 ]
 [tool.hatch.envs.default.scripts]
 start = "uvicorn fast_request_logger.main:app --reload --port 8000 --log-level error"
