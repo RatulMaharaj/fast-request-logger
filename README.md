@@ -1,6 +1,6 @@
 # fast-request-logger
 
-This is a simple python app that acts as a sandbox for you to send requests to.
+This is a simple python app that acts as a sandbox for you to send requests to. 
 
 The following request methods are supported:
 - `GET`
@@ -8,6 +8,11 @@ The following request methods are supported:
 - `POST`
 - `DELETE`
 - `PATCH`
+
+## Demo
+
+![Kapture 2023-05-09 at 00 21 03](https://user-images.githubusercontent.com/56479869/236950896-3b3060bf-edbb-43b4-8858-7b05c6bc58e0.gif)
+
 
 ## Prerequisites
 
@@ -30,7 +35,7 @@ hatch run start
 
 3. Send a POST or PUT request to the app
 ```sh
-curl -X POST -H "Content-Type: application/json" -d '{"message":"Wow, it works!"}' http://127.0.0.1:8000
+curl -X POST -H "Content-Type: application/json" -d '{"message": "Howdy!"}' http://127.0.0.1:8000
 ```
 
 ## License
