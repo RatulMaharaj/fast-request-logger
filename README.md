@@ -20,18 +20,18 @@ The follwoing request methods are supported:
 
 1. Clone the repo
 
-```console
+```sh
 git clone https://github.com/RatulMaharaj/fast-request-logger.git
 cd fast-request-logger
 ```
 
 2. Start the app using [hatch](https://hatch.pypa.io/latest/)
-```console
+```sh
 hatch run start
 ```
 
 3. Send a POST or PUT request to the app
-```console
+```sh
 curl -X POST -H "Content-Type: application/json" -d '{"message":"Wow, it works!"}' http://127.0.0.1:8000
 ```
 
