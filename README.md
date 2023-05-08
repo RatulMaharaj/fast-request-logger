@@ -2,7 +2,7 @@
 
 This is a simple python app that acts as a sandbox for you to send requests to.
 
-The follwoing request methods are supported:
+The following request methods are supported:
 - `GET`
 - `PUT`
 - `POST`
