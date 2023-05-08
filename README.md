@@ -1,23 +1,38 @@
 # fast-request-logger
 
-[![PyPI - Version](https://img.shields.io/pypi/v/fast-request-logger.svg)](https://pypi.org/project/fast-request-logger)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fast-request-logger.svg)](https://pypi.org/project/fast-request-logger)
-
 -----
 
-**Table of Contents**
+This is a simple python app that acts as a sandbox for you to send requests to.
 
-- [Installation](#installation)
-- [License](#license)
+The follwoing request methods are supported:
+- `GET`
+- `PUT`
+- `POST`
+- `DELETE`
+- `PATCH`
 
-## Installation
+## Prerequisites
+
+- [Python](https://www.python.org) - tested on 3.11
+- [hatch](https://hatch.pypa.io/latest/) - `pipx install hatch` or `pip install hatch`
+
+## Quick Start
+
+1. Clone the repo
 
 ```console
-pipx install hatch
+git clone https://github.com/RatulMaharaj/fast-request-logger.git
+cd fast-request-logger
 ```
 
+2. Start the app using [hatch](https://hatch.pypa.io/latest/)
 ```console
 hatch run start
+```
+
+3. Send a POST or PUT request to the app
+```console
+curl -X POST -H "Content-Type: application/json" -d '{"message":"Wow, it works!"}' http://127.0.0.1:8000
 ```
 
 ## License
