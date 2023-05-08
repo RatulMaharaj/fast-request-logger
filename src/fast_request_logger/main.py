@@ -42,7 +42,7 @@ async def log_request(request: Request, method: str):
 
     log_item = {
         "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "method": "POST",
+        "method": method,
         "body": body,
         "headers": headers,
     }
